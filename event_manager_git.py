@@ -9,7 +9,7 @@ class Event:
         self.total_tickets = total_tickets
         self.available_tickets = total_tickets
         self.ticket_price = ticket_price
-    
+# This fucn displays details of booking
     def display_details(self):
         print(f"\nEvent ID: {self.event_id}")
         print(f"Event Name: {self.name}")
@@ -17,7 +17,7 @@ class Event:
         print(f"Venue: {self.venue}")
         print(f"Available Tickets: {self.available_tickets}/{self.total_tickets}")
         print(f"Ticket Price: ${self.ticket_price:.2f}")
-    
+
     def book_tickets(self, quantity):
         if quantity <= self.available_tickets:
             self.available_tickets -= quantity
@@ -109,7 +109,7 @@ class EventManagementSystem:
         print("\nAll Bookings:")
         for booking in self.bookings.values():
             booking.display_details()
-
+# main func
 def main():
     system = EventManagementSystem()
     
@@ -151,7 +151,7 @@ def main():
         elif choice == "6":
             print("Exiting system. Goodbye!")
             break
-        
+
         else:
             print("Invalid choice. Please try again.")
 # main program
