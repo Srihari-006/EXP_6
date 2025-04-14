@@ -1,5 +1,5 @@
 from datetime import datetime
-
+#This the main class
 class Event:
     def __init__(self, event_id, name, date, venue, total_tickets, ticket_price):
         self.event_id = event_id
@@ -100,7 +100,7 @@ class EventManagementSystem:
         print(f"\nBookings for Event {event_id}:")
         for booking in event_bookings:
             booking.display_details()
-    
+
     def display_all_bookings(self):
         if not self.bookings:
             print("\nNo bookings available.")
@@ -154,6 +154,6 @@ def main():
         
         else:
             print("Invalid choice. Please try again.")
-
+# main program
 if __name__ == "__main__":
     main()
